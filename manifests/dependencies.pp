@@ -16,7 +16,7 @@ class graylog2::dependencies {
   or $graylog2::install == 'puppi' {
     include java
     include elasticsearch
-    include mongodb
+    /*include mongodb
     if $graylog2::mongo_db_host == '127.0.0.1'
     or $graylog2::mongo_db_host == 'localhost' {
       mongodb::user { $graylog2::mongo_user:
@@ -33,7 +33,7 @@ class graylog2::dependencies {
         password => $graylog2::mongo_password,
         tag      => "mongo_user_${graylog2::mongo_db_host}",
       }
-    }
+    }*/
   }
 
   # Dependencies for graylog2-web-interface
